@@ -1,231 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZYROX | Premium Shoes</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
+<title>NYXORA | Luxury Accessories</title>
 
-    body{
-      background:#0d0d0d;
-      color:white;
-      overflow-x:hidden;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:20px 8%;
-      position:fixed;
-      width:100%;
-      top:0;
-      background:rgba(0,0,0,0.7);
-      backdrop-filter:blur(10px);
-      z-index:1000;
-    }
+<style>
 
-    .logo{
-      font-size:32px;
-      font-weight:800;
-      color:#ff2e63;
-      letter-spacing:2px;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin-left:30px;
-      font-weight:500;
-      transition:0.3s;
-    }
+body{
+    background:#0f0f0f;
+    color:white;
+}
 
-    nav a:hover{
-      color:#ff2e63;
-    }
+/* NAVBAR */
 
-    .hero{
-      height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      padding:0 8%;
-      background:linear-gradient(to right,#000000,#1a1a1a);
-      gap:60px;
-    }
+nav{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(10px);
+}
 
-    .hero-text{
-      flex:1;
-    }
+.logo{
+    font-size:32px;
+    font-weight:700;
+    letter-spacing:3px;
+    color:#ffd700;
+}
 
-    .hero-text h1{
-      font-size:75px;
-      line-height:1.1;
-      margin-bottom:20px;
-    }
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
 
-    .hero-text span{
-      color:#ff2e63;
-    }
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+    transition:0.3s;
+}
 
-    .hero-text p{
-      color:#cfcfcf;
-      font-size:18px;
-      margin-bottom:35px;
-      max-width:550px;
-    }
+nav ul li a:hover{
+    color:#ffd700;
+}
 
-    .btn{
-      display:inline-block;
-      padding:15px 35px;
-      background:#ff2e63;
-      color:white;
-      text-decoration:none;
-      border-radius:40px;
-      font-weight:600;
-      transition:0.3s;
-      box-shadow:0 0 20px rgba(255,46,99,0.4);
-    }
+/* HERO SECTION */
 
-    .btn:hover{
-      transform:translateY(-5px);
-      background:white;
-      color:#ff2e63;
-    }
-
-    .hero-image{
-      flex:1;
-      display:flex;
-      justify-content:center;
-    }
-
-    .hero-image img{
-      width:100%;
-      max-width:520px;
-      filter:drop-shadow(0 0 30px rgba(255,46,99,0.5));
-      animation:float 3s ease-in-out infinite;
-    }
-
-    @keyframes float{
-      0%{transform:translateY(0px);}
-      50%{transform:translateY(-20px);}
-      100%{transform:translateY(0px);}
-    }
-
-    .section-title{
-      text-align:center;
-      font-size:45px;
-      margin-bottom:60px;
-    }
-
-    .products{
-      padding:100px 8%;
-      background:#121212;
-    }
-
+.hero{
+    width:100%;
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1200&auto=format&fit=crop');
     
+    background-size:cover;
+    background-position:center;
+    
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+}
 
-    .about{
-      padding:100px 8%;
-      text-align:center;
-      background:black;
-    }
+.hero-content{
+    max-width:600px;
+}
 
-    .about p{
-      max-width:850px;
-      margin:auto;
-      color:#d0d0d0;
-      font-size:18px;
-      line-height:1.8;
-    }
+.hero h1{
+    font-size:75px;
+    line-height:90px;
+    margin-bottom:20px;
+}
 
-    footer{
-      padding:30px;
-      text-align:center;
-      background:#111;
-      color:#aaa;
-    }
+.hero h1 span{
+    color:#ffd700;
+}
 
-    @media(max-width:900px){
-      .hero{
-        flex-direction:column;
-        text-align:center;
-        padding-top:120px;
-      }
+.hero p{
+    font-size:18px;
+    color:#ddd;
+    margin-bottom:35px;
+}
 
-      .hero-text h1{
-        font-size:50px;
-      }
+.btn{
+    display:inline-block;
+    padding:15px 40px;
+    background:#ffd700;
+    color:black;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:600;
+    transition:0.3s;
+}
 
-      nav{
-        display:none;
-      }
-    }
-  </style>
+.btn:hover{
+    transform:scale(1.08);
+    background:white;
+}
+
+/* PRODUCTS */
+
+.products{
+    padding:100px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:60px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1a1a1a;
+    border-radius:25px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+    font-size:24px;
+}
+
+.card-content p{
+    color:#bbb;
+    font-size:14px;
+}
+
+/* ABOUT */
+
+.about{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.about h2{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.about p{
+    max-width:700px;
+    margin:auto;
+    color:#ccc;
+    line-height:28px;
+}
+
+/* FOOTER */
+
+footer{
+    padding:30px;
+    text-align:center;
+    background:black;
+    color:#999;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:50px;
+    line-height:60px;
+}
+
+nav ul{
+    display:none;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-  <header>
-    <div class="logo">ZYROX</div>
+<!-- NAVBAR -->
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#products">Products</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<nav>
 
-  <section class="hero" id="home">
-    <div class="hero-text">
-      <h1>Step Into <span>Power</span></h1>
-      <p>
-        Premium Sports & Formal Shoes designed for style, comfort and confidence. 
-        Walk like a king with ZYROX.
-      </p>
+<div class="logo">NYXORA</div>
 
-      <a href="#products" class="btn">Shop Now</a>
-    </div>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Shop</a></li>
+<li><a href="#">Collection</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
 
-    <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1170&auto=format&fit=crop" alt="shoe">
-    </div>
-  </section>
+</nav>
 
-  <section class="products" id="products">
-    <h2 class="section-title">Our Collection</h2>
+<!-- HERO SECTION -->
 
-    <div style="text-align:center; max-width:800px; margin:auto; color:#d0d0d0; font-size:20px; line-height:1.8;">
-      <p>
-        Discover premium sports and formal footwear crafted for comfort, style and confidence. 
-        ZYROX brings modern street energy with luxury-level fashion.
-      </p>
-    </div>
-  </section>
+<section class="hero">
 
-  <section class="about" id="about">
-    <h2 class="section-title">About ZYROX</h2>
+<div class="hero-content">
 
-    <p>
-      ZYROX is not just a shoe brand — it’s a lifestyle. 
-      We create bold, stylish and comfortable footwear for the new generation. 
-      From sporty sneakers to premium formal shoes, every step with ZYROX is built to stand out.
-    </p>
-  </section>
+<h1>Luxury That <span>Attracts</span></h1>
 
-  <footer id="contact">
-    <p>© 2026 ZYROX Footwear | Instagram: @zyroxofficial</p>
-  </footer>
+<p>
+Elegant rings, earrings & accessories crafted to elevate your style.
+</p>
+
+<a href="#" class="btn">Explore Collection</a>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products">
+
+<h2 class="section-title">Trending Collection</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<h3>Luxury Rings</h3>
+<p>Premium fashion rings collection.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<h3>Elegant Earrings</h3>
+<p>Minimal & aesthetic earrings.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<h3>Charm Accessories</h3>
+<p>Luxury accessories for modern girls.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about">
+
+<h2>About NYXORA</h2>
+
+<p>
+NYXORA is a modern luxury accessories brand designed for girls who love elegance, confidence, and style. Our collections are inspired by beauty, fashion, and timeless attraction.
+</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 NYXORA | All Rights Reserved
+
+</footer>
 
 </body>
 </html>
